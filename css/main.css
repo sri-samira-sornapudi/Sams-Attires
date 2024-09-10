@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+
+:root{
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Poppins', sans-serif;
+    --pink: #e5345b;
+}
+body{
+    font-family: var(--sm-font);
+}
+
+/* button */
+.bg-primary{
+    background-color: var(--pink)!important;
+}
+
+.btn:not(.nav-btns button){
+    background-color: #fff;
+    color: rgb(85, 85, 85);
+    padding: 10px 28px;
+    border-radius: 25px;
+    border: 1px solid rgb(85, 85, 85);
+}
+.btn:not(.nav-btns button):hover{
+    background-color: var(--pink);
+    color: #fff;
+    border-color: var(--pink);
+}
+
+/* text color */
+.text-primary{
+    color: var(--pink)!important;
+}
+
+/* navbar */
+.navbar{
+    width: 100%;
+    -webkit-box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+}
+.navbar-nav {
+    background-color: white;
+    width: 100%;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    justify-content: space-between;
+}
+.navbar-brand img{
+    width: 30px;
+    margin-left: 5%;
+}
+.navbar-brand span{
+    letter-spacing: 2px;
+    font-family: var(--lg-font);
+}
+.nav-btns .btn {
+    font-size: 1.8rem; 
+    padding: 0.3rem 1rem;
+}
+.nav-btns .btn .position-absolute{
+    font-size: 0.8rem;
+}
+.nav-link:hover{
+    color: var(--pink)!important;
+}
+.nav-item{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+    padding: 0 1rem;
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem; /* Adjust for vertical spacing */
+}
+
+/* header */
+#header{
+    background: url(../images/pink-bg1.jpg) top/cover no-repeat;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+.carousel-inner h1{
+    font-size: 60px;
+    font-family: var(--lg-font);
+}
+.carousel-item{
+    padding: 0.5rem 1rem;
+}
+.carousel-item .btn{
+    border-color: #fff!important;
+}
+.carousel-item .btn:hover{
+    border-color: var(--pink)!important;
+}
+
+/* title */
+.title h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: var(--pink);
+    left: -20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+/* collection */
+.active-filter-btn{
+    background-color: var(--pink)!important;
+    color: #fff!important;
+    border-color: var(--pink)!important;
+}
+.filter-button-group .btn:hover{
+    color: #fff!important;
+}
+.blur-image{
+    filter: blur(2.5px);
+}
+.collection-img span{
+    top: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
+
+/* offers */
+#offers{
+    background: url(../images/pink-bg3.jpg) center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+    min-height: 45vh; 
+}
+#offers .row{
+    min-height: 60vh;
+}
+.offers-content span{
+    font-size: 28px;
+}
+.offers-content h2{
+    font-size: 60px;
+    font-family: var(--lg-font);
+}
+.offers-content .btn{
+    border-color: transparent!important;
+}
+
+/* notification */
+#notification{
+    background-color: rgba(179, 179, 179, 0.05);
+}
+#notification p{
+    max-width: 600px;
+}
+#notification .input-group{
+    max-width: 500px;
+}
+#notification .form-control{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+#notification .btn{
+    background-color: var(--pink);
+    color: #fff;
+    border-color: var(--pink);
+}
+#notification .btn:hover{
+    background-color: #000;
+    border-color: #000;
+}
+
+/* about */
+#about{
+    background-color: rgba(179, 179, 179, 0.05);
+}
+
+/* footer */
+footer .brand{
+    font-family: var(--lg-font);
+    letter-spacing: 2px;
+}
+footer a{
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+footer a:hover{
+    color: var(--pink)!important;
+}
+footer .description{
+    color: grey;
+}
+footer .text-grey{
+    color: grey;
+}
+footer .icon-grey{
+    color: grey;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media(min-width: 992px){
+    .navbar-nav {
+        justify-content: center;
+    }
+    .nav-item{
+        border-bottom: none;
+        padding: 0 1.5rem;
+    }
+}
+@media (max-width: 1080px) {
+    #header {
+        height: 60vh !important; 
+        background-size: cover !important;  
+        background-position: center center !important; 
+    }
+}
+@media (max-width: 1080px) {
+    #offers {
+        height: 45vh !important;
+        background-size: cover !important;
+        background-position: center top !important;
+    }
+}
